@@ -1,0 +1,23 @@
+{
+  "name": "ts-utilities",
+  "version": "1.0.0",
+  "description": "helpers for typescript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos-labrador/ts-utilities.git"
+  },
+  "author": "carlos.labrador",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlos-labrador/ts-utilities/issues"
+  },
+  "homepage": "https://github.com/carlos-labrador/ts-utilities#readme",
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
+}
