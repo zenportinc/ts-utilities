@@ -1,13 +1,11 @@
-type NotAllowedSpecialCharacters = `${string}${'\\\\' | '\\' | '//' | '/' | ':' | '*' | '?' | '"' | '<' | '>' | '|'}${string}`;
+type NotAllowedSpecialCharacters = `${string}${'\\' | '/' | ':' | '*' | '?' | '"' | '<' | '>' | '|'}${string}`;
 type AllowedSpecialCharacters = `${string}${'_' | '-' | '%' | '+' | '!' | "'" | '{' | '}' | '~'}${string}`;
 
 const charactersMap = new Map<NotAllowedSpecialCharacters, AllowedSpecialCharacters>([
-  ['\\\\', '_'],
   ['\\', '_'],
-  ['//', '-'],
   ['/', '-'],
   [':', '%'],
-  ['*', '-'],
+  ['*', '+'],
   ['?', '!'],
   ['"', "'"],
   ['<', '{'],
@@ -18,7 +16,7 @@ const charactersMap = new Map<NotAllowedSpecialCharacters, AllowedSpecialCharact
 /**
  * Regex match rule:
  */
-export const regex = /(\/\/|\/|\\\\|\\|:|\*|\?|"|<|>|\|)/g
+export const regex = /[\\\\/:*?"<>|]/g
 
 /**
  * Replacer
